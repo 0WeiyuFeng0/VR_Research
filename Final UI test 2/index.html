@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>360 Video Tour</title>
+
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no'>
+    <meta name='mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-capable' content='yes' />
+    <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    
+</head>
+
+<body>
+
+   
+    <div id='fullScreenContainer'>    
+        
+        <!-- controlBar -->
+        <div id="controlBar">
+            <div>
+                <input type="range" class="inputBar" id="seekBar" value="0">
+            </div>
+            <div>
+                <div class="buttonDiv first" id="previousButton">
+                    <i class="fa fa-step-backward"></i>
+                </div>
+                <div class="buttonDiv" id="playButton">
+                    <i class="fa fa-pause"></i>
+                </div>
+                <div class="buttonDiv" id="nextButton">
+                    <i class="fa fa-step-forward"></i>
+                </div>
+                <div class="buttonDiv" id="volumeButton">
+                    <i class="fa fa-volume-up"></i>
+                </div>
+                <div class="buttonDiv" id="volumeBarDiv">
+                    <input type="range" class="inputBar" id="volumeBar" min="0" max="1" step="0.1" value="1">
+                </div>
+                <div class="buttonDiv right last">
+                    <i class='fa fa-arrows-alt' id='fullScreenButton'></i>
+                </div>
+                <div class="buttonDiv right ">
+                    <i class='fa fa-star' id='resetButton'></i>
+                </div>        
+                <!--<span><i class='fa fa-eye' id='vrButton'></i></span>-->
+           </div>
+        </div>
+        
+        <!-- NavBar -->
+        <div id="container"> 
+            <a>&#9776;</a>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href='javascript:void(0)' onclick='switchSource(1)'>Fusion06</a>
+            <a href='javascript:void(0)' onclick='switchSource(2)'>Advising1</a>
+<!--            <div class="view">-->
+                <a href='javascript:void(0)' onclick='switchSource(3)'>Dean1</a>
+<!--            </div>-->
+             <a href='javascript:void(0)' onclick='switchSource(4)'>DrSun1</a>
+            <a href='javascript:void(0)' onclick='switchSource(0)'>image 360</a>
+          
+        </div>
+        
+    </div> 
+</body>
+
+<!-- Jquery library-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- three.js library -->
+<script src='vendor/three.js/build/three.js'></script>
+
+<!-- VRControls.js applies the WebVR transformations to a three.js camera object. -->
+<script src='vendor/three.js/examples/js/controls/VRControls.js'></script>
+
+<!-- VREffect.js handles stereo camera setup and rendering.  -->
+<script src='vendor/three.js/examples/js/effects/VREffect.js'></script>
+<!-- <script src='vendor/three.js/examples/js/effects/VREffect-fromweb.js'></script> -->
+
+<!-- A polyfill for the WebVR API.  -->
+<script src='vendor/webvr-polyfill.js'></script>
+
+<!-- For 360Video, NavBar, and ControlBar -->
+<script src="scripts.js"></script>
+    
+</html>
